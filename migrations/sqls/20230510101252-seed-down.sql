@@ -1,0 +1,1 @@
+drop table cars/* Replace with your SQL commands */
