@@ -2,11 +2,12 @@ import express, { Request, Response }  from 'express';
 
 // import authentication from './authentication';
 import users from './users';
+import authentication from './auth';
 
 const router = express.Router();
 
 export default (): express.Router => {
-//   authentication(router);
+    authentication(router);
     users(router);
     router.get('/', function(req: Request , res: Response){
         res.send("Hello world!");

@@ -1,1 +1,0 @@
-drop table users/* Replace with your SQL commands */

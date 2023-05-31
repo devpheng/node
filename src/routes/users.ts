@@ -1,6 +1,8 @@
 import express, { Request, Response }  from 'express';
-import { getUsers } from '../controllers/users';
+import { getUsers, registerUser } from '../controllers/users';
+import { authenticateJWT } from '../middleware/auth'
 
 export default (router: express.Router ) => {
-    router.get('/user', getUsers);
+    router.get('/user', authenticateJWT, getUsers);
+    router.post('/user', registerUser);
 };
